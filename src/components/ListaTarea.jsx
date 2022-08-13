@@ -6,7 +6,9 @@ const ListaTarea = (props) => {
   return (
     <div>
       <ListGroup>
-        <ItemTarea></ItemTarea>
+        {
+            props.arregloTarea.map((item, posicion)=><ItemTarea key={posicion} tareaCargada={item}></ItemTarea>)
+        }
       </ListGroup>
     </div>
   );
