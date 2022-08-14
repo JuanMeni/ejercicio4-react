@@ -6,9 +6,9 @@ const ListaTarea = (props) => {
   return (
     <div>
       <ListGroup>
-        {
-            props.arregloTarea.map((item, posicion)=><ItemTarea key={posicion} tareaCargada={item}></ItemTarea>)
-        }
+        {props.arregloTarea.map((item, posicion) => (
+          <ItemTarea key={posicion} tareaCargada={item} borrarTarea={props.borrarTarea} ></ItemTarea>
+        ))}
       </ListGroup>
     </div>
   );
